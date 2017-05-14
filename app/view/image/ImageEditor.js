@@ -14,6 +14,7 @@ Ext.define('ImageEditorApp.view.image.ImageEditor', {
     tbar: [
         {
             iconCls: 'x-fa fa-file-image-o',
+            handler: 'onLoadImgClick',
             text: '加载图片'
         },
         {
@@ -55,6 +56,11 @@ Ext.define('ImageEditorApp.view.image.ImageEditor', {
                     type: 'circle',
                     tooltip: '圆'
                 },
+                {
+                    iconCls: 'x-fa fa-circle',
+                    type: 'ellipse',
+                    tooltip: '椭圆'
+                },
 
                 {
                     iconCls: 'x-fa fa-text-width',
@@ -77,9 +83,7 @@ Ext.define('ImageEditorApp.view.image.ImageEditor', {
                 }
             ],
             listeners: {
-                render: function (btn) {
-                    btn.btnIconEl.setStyle({color: btn.color});
-                }
+                render: 'onColorBtnRender'
             }
         },
         '->',

@@ -37,7 +37,7 @@ Ext.define('ImageEditorApp.view.image.IntersectionsComponent', {
         spritemousedown: 'onMouseDown',
         spritemousemove: 'onMouseMove',
         spritemouseup: 'onMouseUp',
-        // spritemouseout: 'onMouseUp'
+        spritemouseout: 'onMouseOut'
     },
 
 

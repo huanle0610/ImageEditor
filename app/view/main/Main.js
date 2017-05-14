@@ -14,8 +14,7 @@ Ext.define('ImageEditorApp.view.main.Main', {
         'Ext.window.MessageBox',
 
         'ImageEditorApp.view.main.MainController',
-        'ImageEditorApp.view.main.MainModel',
-        'ImageEditorApp.view.main.List'
+        'ImageEditorApp.view.main.MainModel'
     ],
 
     controller: 'main',
