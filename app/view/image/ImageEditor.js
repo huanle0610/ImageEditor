@@ -93,7 +93,7 @@ Ext.define('ImageEditorApp.view.image.ImageEditor', {
         },
         {
             iconCls: 'x-fa fa-save',
-            text: '保存'
+            text: '保存',
         },
         {
             text: '导出',
@@ -115,7 +115,13 @@ Ext.define('ImageEditorApp.view.image.ImageEditor', {
         },
         {
             iconCls: 'x-fa fa-eye',
-            text: '预览'
+            text: '预览代码',
+            handler: 'onPreviewCodeClick'
+        },
+        {
+            iconCls: 'x-fa fa-eye',
+            text: '预览',
+            handler: 'onPreviewClick'
         }
     ],
     bodyBorder: true,
@@ -127,7 +133,8 @@ Ext.define('ImageEditorApp.view.image.ImageEditor', {
 
     items: [
         {
-            xtype: 'intersections'
+            xtype: 'intersections',
+            references: ''
         }
     ]
 });

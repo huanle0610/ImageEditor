@@ -1,6 +1,7 @@
 Ext.define('ImageEditorApp.view.image.IntersectionsComponent', {
     extend: 'Ext.draw.Component',
     xtype: 'intersections-component',
+    engine: 'Ext.draw.engine.Svg',
 
     // Loading PathUtil is required to be able to hit test
     // and test for path intersections in sprites.

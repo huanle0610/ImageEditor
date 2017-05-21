@@ -34,11 +34,13 @@ Ext.define('ImageEditorApp.view.image.Intersections', {
                 // {
                 //     type: 'image',
                 //     surface: 'iamge',
-                //     x: 330,
-                //     y: 10,
-                //     width: 150,
-                //     height: 252,
-                //     src: 'http://www2.gol.com/users/kcleary/oz_gifs/scarecrow.gif',
+                //     x: 100,
+                //     y: 100,
+                //     translationX: 92,
+                //     translationY: 112,
+                //     width: 300,
+                //     height: 250,
+                //     src: '/ImageEditor/resources/image/bird.png',
                 //     fillStyle: 'yellow'
                 // },
                 // {
