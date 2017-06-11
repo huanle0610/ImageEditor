@@ -93,7 +93,7 @@ Ext.define('ImageEditorApp.view.image.ImageEditor', {
         },
         {
             iconCls: 'x-fa fa-save',
-            text: '保存',
+            text: '保存'
         },
         {
             text: '导出',

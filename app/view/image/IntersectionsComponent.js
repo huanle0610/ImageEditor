@@ -21,39 +21,51 @@ Ext.define('ImageEditorApp.view.image.IntersectionsComponent', {
 
     plugins: ['spriteevents'],
 
-    listeners: {
-        mousedown: {
-            element: 'el',
-            fn: 'onRawMouseDown'
-        },
-        mouseup: {
-            element: 'el',
-            fn: 'onRawMouseUp'
-        },
-        mousemove: {
-            element: 'el',
-            fn: 'onRawMouseMove'
-        },
-        spriteclick: 'onSpriteClick',
-        spritemousedown: 'onMouseDown',
-        spritemousemove: 'onMouseMove',
-        spritemouseup: 'onMouseUp',
-        spritemouseout: 'onMouseOut'
-    },
-
 
     initComponent: function () {
-        var me = this,
-            surface = me.getSurface();
+        var me = this;
         me.callParent(arguments);
-        me.dots = Ext.create('Ext.draw.sprite.Instancing', {
-            template: {
-                type: 'circle',
-                radius: 5,
-                fillStyle: 'black'
-            }
-        });
-        surface.add(me.dots);
+
+        if(me.controller) {
+            var controller = me.getController();
+            me.on({
+                mousedown: {
+                    element: 'el',
+                    scope: controller,
+                    fn: 'onRawMouseDown'
+                },
+                mouseup: {
+                    element: 'el',
+                    scope: controller,
+                    fn: 'onRawMouseUp'
+                },
+                mousemove: {
+                    element: 'el',
+                    scope: controller,
+                    fn: 'onRawMouseMove'
+                },
+                spriteclick: {
+                    scope: controller,
+                    fn: 'onSpriteClick'
+                },
+                spritemousedown: {
+                    scope: controller,
+                    fn: 'onMouseDown'
+                },
+                spritemousemove: {
+                    scope: controller,
+                    fn: 'onMouseMove'
+                },
+                spritemouseup: {
+                    scope: controller,
+                    fn: 'onMouseUp'
+                },
+                spritemouseout: {
+                    scope: controller,
+                    fn: 'onMouseOut'
+                }
+            });
+        }
     }
 
 });

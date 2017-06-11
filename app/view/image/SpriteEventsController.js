@@ -79,7 +79,7 @@ Ext.define('ImageEditorApp.view.image.SpriteEventsController', {
                         surface.add({
                             type: 'text',
                             text: val,
-                           x: position[0],
+                            x: position[0],
                             y: position[1],
                             fontSize: 30,
                             fillStyle: color
@@ -401,20 +401,6 @@ Ext.define('ImageEditorApp.view.image.SpriteEventsController', {
 
 
         me.isDragging = false;
-        me.getView().dots.clearAll();
         surface.renderFrame();
-    },
-
-    showIntersections: function (intersections) {
-        var me = this,
-            i, ln, point;
-        me.getView().dots.clearAll();
-        for (i = 0, ln = intersections.length; i < ln; i++) {
-            point = intersections[i];
-            me.getView().dots.createInstance({
-                cx: point[0],
-                cy: point[1]
-            });
-        }
     }
 });
